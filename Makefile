@@ -14,7 +14,7 @@ serve:
 
 # Format all files
 fmt:
-	deno fmt web/ serve.ts AGENTS.md
+	deno fmt web/ serve.ts AGENTS.md README.md
 
 # Lint all files
 lint:
@@ -22,5 +22,5 @@ lint:
 
 # Run format check and lint
 check:
-	deno fmt --check web/ serve.ts AGENTS.md
+	deno fmt --check web/ serve.ts AGENTS.md README.md
 	deno lint web/ serve.ts

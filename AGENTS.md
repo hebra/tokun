@@ -2,12 +2,12 @@
 
 ## Project Overview
 
-Tokun is a lightweight, interactive, and responsive JSON Web Token (JWT) debugger
-built with vanilla HTML, CSS, and JavaScript. The project allows
-users to paste a JWT into one textarea and see the decoded JSON (Header,
-Payload, Signature) in another. Users can edit the decoded JSON, and the changes
-are reflected in real-time in the encoded token textarea. The goal is to provide
-a fast, privacy-focused, and framework-free tool for JWT manipulation.
+Tokun is a lightweight, interactive, and responsive JSON Web Token (JWT)
+debugger built with vanilla HTML, CSS, and JavaScript. The project allows users
+to paste a JWT into one textarea and see the decoded JSON (Header, Payload,
+Signature) in another. Users can edit the decoded JSON, and the changes are
+reflected in real-time in the encoded token textarea. The goal is to provide a
+fast, privacy-focused, and framework-free tool for JWT manipulation.
 
 ## Tech Stack
 
@@ -18,6 +18,8 @@ a fast, privacy-focused, and framework-free tool for JWT manipulation.
 - **CSS3**: Modern layout (Grid, Flexbox) and Custom Properties for theming.
 - **Vanilla JavaScript (ES6+)**: Pure DOM manipulation, no external frameworks
   or libraries.
+- **Web Crypto API**: Native browser support for cryptographic operations
+  (HS256, HS384, HS512).
 - **Deno**: Used for the local development server, code formatting, and linting.
 - **Makefile**: Task runner for common operations (`serve`, `format`, `lint`).
 
@@ -59,8 +61,8 @@ tokun/
 ### Module Responsibilities
 
 - **`jwt.js`**: Pure functions for decoding and encoding JWTs (Header, Payload,
-  Signature). Handles real-time synchronization between the encoded token and
-  the decoded JSON components.
+  Signature). Handles real-time synchronisation and signature verification
+  between the encoded token and the decoded JSON components.
 - **`theme.js`**: Manages dark/light mode persistence and system preference
   detection.
 - **`utils.js`**: Provides UI-agnostic helpers like `base64urlEncode`,
@@ -123,10 +125,43 @@ tokun/
   scripts.
 - ❌ **No !important**: Avoid `!important` in CSS; use proper specificity.
 
+### Mode-Specific Instructions
+
+#### [CHAT]
+
+- Provide architectural advice or explain project logic.
+- Do not suggest external libraries or frameworks.
+
+#### [CODE]
+
+- All code changes must be validated with `make fmt` and `make lint`.
+- Ensure real-time synchronisation is maintained between all editors.
+- Maintain British English spelling in all comments and strings.
+
+#### [SETUP]
+
+- Ensure Deno is used for any server-side or build-related tasks.
+- Do not introduce `package.json` or other Node.js-specific files.
+
 ## Version History
 
+- **v1.3** (2026-03-05) - Added live demo button to README.md and updated
+  Makefile formatting tasks.
+- **v1.2** (2026-03-05) - Updated module responsibilities and tech stack to
+  reflect signature verification features.
+- **v1.1** (2026-03-05) - Added mode-specific instructions and changelog.
 - **v1.0** (2026-03-05) - Initial guidelines established for the Tokun JWT
   debugger project.
+
+## Changelog
+
+- Added a live demo button to `README.md` pointing to `https://tokun.yogu.one`.
+- Included `README.md` in the `Makefile` formatting targets (`fmt` and `check`).
+- Updated `Module Responsibilities` for `jwt.js` to include signature
+  verification.
+- Added `Web Crypto API` to the `Tech Stack` section.
+- Refined content for conciseness and clarity.
+- Ensured consistent British English spelling throughout.
 
 ---
 
