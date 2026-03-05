@@ -26,6 +26,24 @@ export function base64urlDecode(str) {
 }
 
 /**
+ * Decodes a Base64URL encoded string to a Uint8Array.
+ * @param {string} str - The Base64URL encoded string to decode.
+ * @returns {Uint8Array} The decoded byte array.
+ */
+export function base64urlToBytes(str) {
+  let base64 = str.replace(/-/g, "+").replace(/_/g, "/");
+  while (base64.length % 4) {
+    base64 += "=";
+  }
+  const binaryString = atob(base64);
+  const bytes = new Uint8Array(binaryString.length);
+  for (let i = 0; i < binaryString.length; i++) {
+    bytes[i] = binaryString.charCodeAt(i);
+  }
+  return bytes;
+}
+
+/**
  * Copies text to the system clipboard.
  * @param {string} text - The text to copy.
  * @returns {Promise<boolean>} Whether the copy was successful.

@@ -1,9 +1,9 @@
-# Agent Guidelines: Tokun (JWT Decoder/Encoder Project)
+# Agent Guidelines: Tokun (JWT Debugger Project)
 
 ## Project Overview
 
-Tokun is a lightweight, interactive, and responsive JSON Web Token (JWT) decoder
-and encoder built with vanilla HTML, CSS, and JavaScript. The project allows
+Tokun is a lightweight, interactive, and responsive JSON Web Token (JWT) debugger
+built with vanilla HTML, CSS, and JavaScript. The project allows
 users to paste a JWT into one textarea and see the decoded JSON (Header,
 Payload, Signature) in another. Users can edit the decoded JSON, and the changes
 are reflected in real-time in the encoded token textarea. The goal is to provide
@@ -126,7 +126,7 @@ tokun/
 ## Version History
 
 - **v1.0** (2026-03-05) - Initial guidelines established for the Tokun JWT
-  decoder/encoder project.
+  debugger project.
 
 ---
 

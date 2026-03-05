@@ -1,5 +1,5 @@
-# Tokun — JWT Decoder/Encoder
-Tokun (トークン) is a lightweight, interactive, and responsive JSON Web Token (JWT) decoder and encoder built with vanilla HTML, CSS, and JavaScript.
+# Tokun — JWT Debugger
+Tokun (トークン) is a lightweight, interactive, and responsive JSON Web Token (JWT) debugger built with vanilla HTML, CSS, and JavaScript.
 
 [![Licence](https://img.shields.io/badge/Licence-GPLv3-blue.svg)](LICENSE)
 

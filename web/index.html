@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Tokun: A lightweight, privacy-focused JWT decoder and encoder."
+      content="Tokun: A lightweight, privacy-focused JWT debugger."
     >
-    <title>Tokun — JWT Decoder/Encoder</title>
+    <title>Tokun — JWT Debugger</title>
     <link rel="icon" type="image/png" href="assets/tokun.png">
 
     <!-- Fonts -->
@@ -41,7 +41,7 @@
         <div class="header-top">
           <div class="header-brand">
             <img src="assets/tokun.png" alt="" class="logo">
-            <h1>Tokun — JWT Decoder/Encoder</h1>
+            <h1>Tokun — JWT Debugger</h1>
           </div>
           <button
             id="theme-toggle"
@@ -219,12 +219,29 @@
               id="signature-editor"
               placeholder="Signature portion (encoded)..."
             ></textarea>
+
+            <div class="signature-verification">
+              <div class="field-header">
+                <label for="signature-secret">Verify Signature (Secret):</label>
+                <span id="signature-status" class="signature-status">NO TOKEN</span>
+              </div>
+              <input
+                type="password"
+                id="signature-secret"
+                class="secret-input"
+                placeholder="Enter secret to verify..."
+              >
+              <p id="verification-note" class="verification-note">
+                Enter the secret key to verify the token's integrity.
+                Supported algorithms: HS256, HS384, HS512.
+              </p>
+            </div>
           </div>
         </section>
       </main>
 
       <footer>
-        <p>&copy; 2026 Tokun. Licensed under GNU GPL v3.</p>
+        <p>&copy; 2026 yogu.one - Licensed under GNU GPL v3.</p>
       </footer>
     </div>
 

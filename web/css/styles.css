@@ -184,6 +184,15 @@ textarea:focus {
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
 }
 
+textarea.invalid-input {
+  border-color: var(--error-colour);
+}
+
+textarea.invalid-input:focus {
+  border-color: var(--error-colour);
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+}
+
 #header-editor,
 #signature-editor {
   min-height: 100px;
@@ -216,6 +225,60 @@ footer {
   text-align: center;
   color: var(--text-secondary);
   font-size: 0.875rem;
+}
+
+/* Signature Verification */
+.signature-verification {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-colour);
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.signature-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: var(--text-muted);
+  color: white;
+}
+
+.signature-status.verified {
+  background-color: var(--success-colour);
+}
+
+.signature-status.invalid {
+  background-color: var(--error-colour);
+}
+
+.signature-status.missing {
+  background-color: var(--accent-colour);
+}
+
+.secret-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-colour);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  font-family: inherit;
+}
+
+.secret-input:focus {
+  outline: none;
+  border-color: var(--accent-colour);
+}
+
+.verification-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
 /* Toast Notification Styles */
